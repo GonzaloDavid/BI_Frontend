@@ -1,1 +1,28 @@
-<h1>Hola mundop</h1>
+<p-table [value]="clientList" styleClass="p-datatable-striped" [style]="{ 'font-size': '12px' }" [responsive]="true"
+    [lazy]="true" >
+    <ng-template pTemplate="caption">
+        <div class="flex align-items-center justify-content-between">
+            Listado de Clientes
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width: 25%;">Codigo</th>
+            <th style="width: 25%;">Nombre</th>
+            <th style="width: 25%;">Apellido</th>
+            <th style="width: 25%;">Edad</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-index="rowIndex">
+        <tr>
+            <td>
+               {{''}}
+            </td>
+            <td>{{rowData.NumeroGuia}}</td>
+            <td>{{rowData.NombreRemitente}}</td>
+            <td>{{rowData.DireccionDestinatario}}</td>
+            <td>{{rowData.Total}}</td>
+            
+        </tr>
+    </ng-template>
+</p-table>
