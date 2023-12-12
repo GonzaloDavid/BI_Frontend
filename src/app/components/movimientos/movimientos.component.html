@@ -1,0 +1,28 @@
+<p-table [value]="listaMovimientos" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width: 45%;">Descripción</th>
+            <th style="width: 45%;">Tipo de movimiento</th>
+            <th style="width: 10%;">Valor</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowdata>
+        <tr>
+            <td>{{ rowdata.descripcion }}</td>
+            <td>{{ rowdata.tipoMovimiento }}</td>
+            <td style="text-align: right;">{{ rowdata.valor | number: '1.2-2'}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+        <div class="grid" >
+            <div class="col-11">
+                <strong>Total</strong>
+            </div>
+            <div class="col-1" style="text-align: right;">
+                <span style="text-align: right;">{{saldoActual | number: '1.2-2'}}</span>
+            </div>
+        </div>
+       
+       
+    </ng-template>
+</p-table>
